@@ -9,8 +9,11 @@ output: beamer_presentation
 # Learning Objectives
 
 > - Identify data analysis as a workflow
+
 > - Explain
-> 	- “Reproducibility”
->	- “Provenance”
+>     - “Reproducibility”
+>     - “Provenance”
+
 > - Assess your personal workflow
+
 > - Devise strategies for reducing risks
