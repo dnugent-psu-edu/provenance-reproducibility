@@ -5,6 +5,7 @@ author: Dan Nugent
 date: October 15, 2015
 output: beamer_presentation
 bibliography: src/bibliography.bib
+csl: _layouts/american-sociological-association.csl
 theme: Rochester
 colortheme: albatross
 ---

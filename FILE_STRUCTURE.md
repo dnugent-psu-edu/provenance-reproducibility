@@ -24,3 +24,9 @@ presentation output by Pandoc during the conversion process.
 img/
   : The “img” directory contains any images used in the presentation 
 slides.
+
+_layouts
+  : The “_layouts” directory contains any files necessary for 
+controlling the layout or design of the final presentation output. 
+This would include an LaTeX templates, LaTeX style definitions, and 
+other files used in the templates such as images.
