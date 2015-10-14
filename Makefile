@@ -1,5 +1,6 @@
 content = src/slides.md
 output_dir = dist
+beamer_template = _layouts/template.tex
 
 # By default, we'll generate all the output.
 all : pdf
@@ -7,7 +8,8 @@ all : pdf
 
 pdf : $(content) $(output_dir) convert_gifs
 	pandoc $(content) --to beamer --output $(output_dir)/slides.pdf \
-        --filter pandoc-citeproc
+        --filter pandoc-citeproc \
+		--template=$(beamer_template)
 
 convert_gifs : $(patsubst %.gif, %.png, $(wildcard img/*.gif))
 
