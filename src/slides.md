@@ -5,6 +5,8 @@ author: Dan Nugent
 date: October 15, 2015
 output: beamer_presentation
 bibliography: src/bibliography.bib
+theme: Rochester
+colortheme: albatross
 ---
 
 # Learning Objectives
