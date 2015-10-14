@@ -3,13 +3,25 @@ output_dir = dist
 beamer_template = _layouts/template.tex
 
 # By default, we'll generate all the output.
-all : pdf
+all : pdf handout notes
 
 
 pdf : $(content) $(output_dir) convert_gifs
 	pandoc $(content) --to beamer --output $(output_dir)/slides.pdf \
         --filter pandoc-citeproc \
 		--template=$(beamer_template)
+
+handout : $(content) $(output_dir) convert_gifs
+	pandoc $(content) --to beamer --output $(output_dir)/handout.pdf \
+        --filter pandoc-citeproc \
+		--template=$(beamer_template) \
+		--variable=handout
+
+notes : $(content) $(output_dir) convert_gifs
+	pandoc $(content) --to beamer --output $(output_dir)/notes.pdf \
+        --filter pandoc-citeproc \
+		--template=$(beamer_template) \
+		--variable=notes
 
 convert_gifs : $(patsubst %.gif, %.png, $(wildcard img/*.gif))
 
