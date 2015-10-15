@@ -499,13 +499,14 @@ involves a balance among competing demands.”
 # Where to learn more…
 
 > - Look into “Reproducible Research”
+> - Look into “Research Data Management”
 > - Benchmark software engineering practices
 > - Learn a formal version control system
 > - Explore “Scientific Workflow Systems” (“formal workflow systems”)
->     - Kepler
->	  - Galaxy
->	  - VisTrails
->	  - Sumatra
+>     - Kepler <https://kepler-project.org/>
+>	  - Galaxy <https://galaxyproject.org/>
+>	  - VisTrails <http://www.vistrails.org/>
+>	  - Sumatra <http://neuralensemble.org/trac/sumatra>
 > - Contact me
 
 # References {.allowframebreaks}
