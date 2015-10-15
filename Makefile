@@ -2,6 +2,9 @@ content = src/slides.md
 output_dir = dist
 beamer_template = _layouts/template.tex
 
+
+git_commit_id = $(shell git rev-parse --short HEAD)
+
 # By default, we'll generate all the output.
 all : pdf handout notes
 
@@ -9,7 +12,8 @@ all : pdf handout notes
 pdf : $(content) $(output_dir) convert_gifs
 	pandoc $(content) --to beamer --output $(output_dir)/slides.pdf \
         --filter pandoc-citeproc \
-		--template=$(beamer_template)
+		--template=$(beamer_template) \
+		--metadata=version_id:$(git_commit_id)
 
 handout : $(content) $(output_dir) convert_gifs
 	pandoc $(content) --to beamer --output $(output_dir)/handout.pdf \

@@ -139,6 +139,13 @@ $endif$
 \pgfdeclareimage[height=0.4in]{university-logo}{_layouts/PennStateLogo}
 \logo{\pgfuseimage{university-logo}}
 
+% Add a footline with our version identifier.
+\setbeamertemplate{footline}
+{%
+\textcolor[rgb]{0.75,0.75,0.75}{\tiny{$if(version_id)$version: $version_id$$endif$}}
+}
+
+
 \begin{document}
 $if(title)$
 \frame{\titlepage}
